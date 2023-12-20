@@ -18,6 +18,7 @@
 const nameForm = document.getElementById('user-name');
 const kmForm = document.getElementById('user-km');
 const ageForm = document.getElementById('user-age');
+const alertForm = document.getElementById('form-alert');
 
 // BUTTON
 const generateButton = document.getElementById('generate-button');
@@ -49,8 +50,8 @@ generateButton.addEventListener('click', function () {
     //? 2 - effettuo la validazione dei valori inseriti dall'utente
 
     if (!nameValue || kmValue < 1 || isNaN(kmValue)) {
-        alert('Inserire dati validi');
-        return
+        alertForm.classList.remove('d-none');
+        return;
     }
 
     //? 3 - calcolo il prezzo base e gli eventuali sconti
@@ -85,6 +86,7 @@ generateButton.addEventListener('click', function () {
 // aggancio il tasto "Ripristina" all'event listener per resettare i campi del form
 restoreButton.addEventListener('click', function () {
     ticketSection.classList.add('d-none');
+    alertForm.classList.add('d-none');
     nameForm.value = '';
     kmForm.value = '';
 })
