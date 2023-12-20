@@ -15,14 +15,13 @@
 // 1 - recupero gli elementi dalla pagina/DOM e preparo le variabili
 
 // FORM
-const name = document.getElementById('user-name');
-const km = document.getElementById('user-km');
-const age = document.getElementById('user-age');
+const nameForm = document.getElementById('user-name');
+const kmForm = document.getElementById('user-km');
+const ageForm = document.getElementById('user-age');
 
 // BUTTON
 const generateButton = document.getElementById('generate-button');
 const restoreButton = document.getElementById('restore-button');
-const name = document.getElementById('user-name');
 
 // TICKET
 const passengerName = document.getElementById('passenger-name');
@@ -34,3 +33,17 @@ const finalPrice = document.getElementById('price');
 // VARIABILI FISSE
 const priceKm = 0.21;
 let ticketTypeVar = 'Standard'
+
+
+// 2 - aggancio il tasto "Conferma" all'event listener e all'interno dell'evento 
+
+generateButton.addEventListener('click', function () {
+
+    //? 1 - leggo i valori del form
+
+    const nameValue = nameForm.value.trim();
+    const kmvalue = parseInt(kmForm.value);
+    const agevalue = ageForm.value;
+    // console.log(nameValue, kmvalue, agevalue);
+
+})
