@@ -63,5 +63,10 @@ generateButton.addEventListener('click', function () {
         ticketTypeVar = 'Tariffa Over65';
         price = price * 0.60;
     }
-    // console.log(price, ticketTypeVar);
+
+    // Randomizzo numero carrozza e numero biglietto
+    const numberVagonRandom = Math.floor(Math.random() * 10) + 1;
+    const pnrCodeRandom = Math.floor(Math.random() * (39999 - 30000)) + 30000;
+
+    // console.log(numberVagonRandom, pnrCodeRandom);
 })
