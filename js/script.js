@@ -24,6 +24,7 @@ const generateButton = document.getElementById('generate-button');
 const restoreButton = document.getElementById('restore-button');
 
 // TICKET
+const ticketSection = document.getElementById('ticket-section');
 const passengerName = document.getElementById('passenger-name');
 const ticketType = document.getElementById('ticket-type');
 const vagonNumber = document.getElementById('vagon-number');
@@ -76,4 +77,14 @@ generateButton.addEventListener('click', function () {
     pnrCode.innerText = pnrCodeRandom;
     finalPrice.innerText = price.toFixed(2) + '€';
 
+    //? 7 - rendo visibile il biglietto
+    ticketSection.classList.remove('d-none');
+})
+
+
+// aggancio il tasto "Ripristina" all'event listener per resettare i campi del form
+restoreButton.addEventListener('click', function () {
+    ticketSection.classList.add('d-none');
+    nameForm.value = '';
+    kmForm.value = '';
 })
