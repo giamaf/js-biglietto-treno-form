@@ -42,8 +42,15 @@ generateButton.addEventListener('click', function () {
     //? 1 - leggo i valori del form
 
     const nameValue = nameForm.value.trim();
-    const kmvalue = parseInt(kmForm.value);
-    const agevalue = ageForm.value;
+    const kmValue = parseInt(kmForm.value);
+    const ageValue = ageForm.value;
     // console.log(nameValue, kmvalue, agevalue);
+
+    //? 2 - effettuo la validazione dei valori inseriti dall'utente
+
+    if (!nameValue || kmValue < 1 || isNaN(kmValue)) {
+        alert('Inserire dati validi');
+        return
+    }
 
 })
