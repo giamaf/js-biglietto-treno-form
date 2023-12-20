@@ -57,10 +57,10 @@ generateButton.addEventListener('click', function () {
 
     //? Calcolo gli sconti
     if (ageValue === 'under18') {
-        ticketTypeVar = 'Tariffa Under18';
+        ticketTypeVar = 'Under18';
         price = price * 0.80;
     } else if (ageValue === 'over65') {
-        ticketTypeVar = 'Tariffa Over65';
+        ticketTypeVar = 'Over65';
         price = price * 0.60;
     }
 
@@ -68,5 +68,12 @@ generateButton.addEventListener('click', function () {
     const numberVagonRandom = Math.floor(Math.random() * 10) + 1;
     const pnrCodeRandom = Math.floor(Math.random() * (39999 - 30000)) + 30000;
 
-    // console.log(numberVagonRandom, pnrCodeRandom);
+
+    //? 6 - stampo i valori sul biglietto
+    passengerName.innerText = nameValue;
+    ticketType.innerText = ticketTypeVar;
+    vagonNumber.innerText = numberVagonRandom;
+    pnrCode.innerText = pnrCodeRandom;
+    finalPrice.innerText = price.toFixed(2) + '€';
+
 })
