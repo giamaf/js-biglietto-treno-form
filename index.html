@@ -29,7 +29,85 @@
 </head>
 
 <body>
+    <main class="container">
 
+        <!-- Form -->
+        <section id="form-section" class="py-5">
+            <h2 class="text-center">Calcola il prezzo del tuo biglietto</h2>
+            <div class="card">
+                <div class="card-body mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="md-4">
+                                <label for="user-name" class="form-label">Nome Cognome</label>
+                                <input type="text" class="form-control" id="user-name" value="" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="md-4">
+                                <label for="user-km" class="form-label">Chilometri</label>
+                                <input type="number" class="form-control" id="user-km" value="" min="1" max="1000"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="md-4">
+                                <label for="user-age" class="form-label">Fascia d'età</label>
+                                <select id="user-age" class="form-select" aria-label="Default select example">
+                                    <option selected value="">Adulto</option>
+                                    <option value="under18">Under 18</option>
+                                    <option value="over65">Over 65</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer py-3 text-center">
+                    <button class="btn btn-primary" id="generate-button">Conferma</button>
+                    <button class="btn btn-secondary" id="restore-button">Ripristina</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticket -->
+        <section id="ticket-section" class="py-5">
+            <h2 class="text-center">Il tuo biglietto</h2>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4 bg-light">
+                        <div class="card-body ">
+                            <h3>Nome passeggero</h3>
+                            <h4 id="passenger-name"></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h4>Offerta</h4>
+                                    <h5 id="ticket-type"></h5>
+                                </div>
+                                <div class="col">
+                                    <h4>Carrozza</h4>
+                                    <h5 id="vagon-number"></h5>
+                                </div>
+                                <div class="col">
+                                    <h4>PNR</h4>
+                                    <h5 id="pnr-code"></h5>
+                                </div>
+                                <div class="col">
+                                    <h4>Prezzo</h4>
+                                    <h5 id="price"></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
 </body>
 
 </html>
