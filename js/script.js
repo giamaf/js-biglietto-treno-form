@@ -11,3 +11,26 @@
 //? 5 - svuoto i campi
 //? 6 - stampo i valori sul biglietto
 //? 7 - rendo visibile il biglietto
+
+// 1 - recupero gli elementi dalla pagina/DOM e preparo le variabili
+
+// FORM
+const name = document.getElementById('user-name');
+const km = document.getElementById('user-km');
+const age = document.getElementById('user-age');
+
+// BUTTON
+const generateButton = document.getElementById('generate-button');
+const restoreButton = document.getElementById('restore-button');
+const name = document.getElementById('user-name');
+
+// TICKET
+const passengerName = document.getElementById('passenger-name');
+const ticketType = document.getElementById('ticket-type');
+const vagonNumber = document.getElementById('vagon-number');
+const pnrCode = document.getElementById('pnr-code');
+const finalPrice = document.getElementById('price');
+
+// VARIABILI FISSE
+const priceKm = 0.21;
+let ticketTypeVar = 'Standard'
