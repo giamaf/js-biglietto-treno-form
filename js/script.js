@@ -44,7 +44,6 @@ generateButton.addEventListener('click', function () {
     const nameValue = nameForm.value.trim();
     const kmValue = parseInt(kmForm.value);
     const ageValue = ageForm.value;
-    // console.log(nameValue, kmvalue, agevalue);
 
     //? 2 - effettuo la validazione dei valori inseriti dall'utente
 
@@ -53,4 +52,16 @@ generateButton.addEventListener('click', function () {
         return
     }
 
+    //? 3 - calcolo il prezzo base e gli eventuali sconti
+    let price = priceKm * kmValue;
+
+    //? Calcolo gli sconti
+    if (ageValue === 'under18') {
+        ticketTypeVar = 'Tariffa Under18';
+        price = price * 0.80;
+    } else if (ageValue === 'over65') {
+        ticketTypeVar = 'Tariffa Over65';
+        price = price * 0.60;
+    }
+    // console.log(price, ticketTypeVar);
 })
